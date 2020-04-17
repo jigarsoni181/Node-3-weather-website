@@ -15,8 +15,9 @@ const foreCast = (latitude,longitude, callback)=>{
             const temp = body.current.temperature;
             const precip = body.current.precip;
             const weatherDescription = body.current.weather_descriptions[0];
+            //console.log(body);
 
-            callback(undefined,weatherDescription+" It is currently "+temp+" degrees out. There is "+precip+"% chances of rain.");
+            callback(undefined,weatherDescription+" It is currently "+temp+" degrees out. There is "+precip+"% chances of rain. It feels like "+body.current.feelslike+" degrees out. The Humidity is "+body.current.humidity+"% .");
             //       }
 
             
